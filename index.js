@@ -1,14 +1,16 @@
-const arr1 = [1, 3, 4, 2, 7, 9, 10, 6, 8];
+// Hiêu ứng hover vào biểu tượng menu
 
-const arr2 = [1, 3, 9, 11, 5, 7, 13];
-const arr = [];
+let menuIcon = document.querySelector(".navbar-icon");
+let menu = document.querySelector("#sidebar ul");
+let icon = menuIcon.querySelector("i");
 
-for (let i = 0; i < arr1.length; i++) {
-  if (arr2.includes(arr1[i])) {
-    if (!arr.includes(arr1[i])) {
-      arr.push(arr1[i]);
-    }
+menuIcon.addEventListener("click", function () {
+  menu.classList.toggle("hidden");
+  if (!menu.classList.contains("hidden")) {
+    icon.classList.add("fa-xmark");
+    icon.classList.remove("fa-bars");
+  } else {
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
   }
-}
-
-console.log(arr);
+});
