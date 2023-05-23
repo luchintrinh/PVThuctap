@@ -1,5 +1,6 @@
 :root {
   --padding-content: 0 129px 183px 129px;
+  --padding-footer: 129px;
 }
 
 * {
@@ -104,7 +105,7 @@ a {
   border-top: 1px solid #dedede;
   grid-row: 2;
   grid-column: 2;
-  padding-left: 129px;
+  padding-left: var(--padding-footer);
 }
 #footer p {
   padding: 30px 0;
@@ -132,6 +133,7 @@ a {
 @media (max-width: 1024px) {
   :root {
     --padding-content: 0 90px 50px 90px;
+    --padding-footer: 90px;
   }
   .ad {
     text-align: center;
@@ -144,9 +146,6 @@ a {
     gap: 50px;
     padding-bottom: 100px;
   }
-  /* #content {
-    padding: 0 90px 50px 90px;
-  } */
 }
 
 /*////////////////////*/
@@ -154,6 +153,7 @@ a {
 @media (max-width: 768px) {
   :root {
     --padding-content: 0;
+    --padding-footer: 0;
   }
   #container {
     display: flex;
@@ -191,7 +191,7 @@ a {
   }
 
   #footer {
-    padding: 0 50px;
+    padding: var(--padding-footer) 50px;
   }
   .item {
     padding: 0 50px;
