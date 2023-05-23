@@ -1,3 +1,7 @@
+:root {
+  --padding-content: 0 129px 183px 129px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -53,7 +57,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 129px 183px 129px;
+  padding: var(--padding-content);
   grid-column: 2;
   grid-row: 1;
 }
@@ -113,15 +117,22 @@ a {
 .navbar-icon {
   display: none;
   color: #191718;
-  padding: 50px 0 0 50px;
+  padding: 25px 0 0 50px;
 }
 .navbar-icon i {
   font-size: 18px;
 }
 
+.navbar-icon i:hover {
+  cursor: pointer;
+}
+
 /*////////////////////*/
 /* RESPONSIVE TABLET */
 @media (max-width: 1024px) {
+  :root {
+    --padding-content: 0 90px 50px 90px;
+  }
   .ad {
     text-align: center;
     background-color: #efefef;
@@ -133,20 +144,20 @@ a {
     gap: 50px;
     padding-bottom: 100px;
   }
-  #content {
-    padding: 0 129px 50px 129px;
-  }
+  /* #content {
+    padding: 0 90px 50px 90px;
+  } */
 }
 
 /*////////////////////*/
 /* RESPONSIVE PHONE */
 @media (max-width: 768px) {
+  :root {
+    --padding-content: 0;
+  }
   #container {
     display: flex;
     flex-direction: column;
-  }
-  #content {
-    padding: 0;
   }
   #sidebar {
     background-color: transparent;
